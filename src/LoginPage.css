@@ -1,0 +1,47 @@
+h2 {
+    font-size: 35px;
+    font-weight: 900;
+    color: #203a43;
+    text-align: left;
+}
+
+.h2-sub {
+    font-size: 22px;
+    color: #203a43;
+    text-align: left;
+}
+
+h3 {
+    font-size: 25px;
+    font-weight: 700;
+    color: #203a43;
+    text-align: left;
+}
+
+.form-input-label {
+    font-weight: 700;
+    text-align: left;
+    float: left;
+    color: #203a43;
+}
+
+.form-error-message {
+    font-size: 14px;
+    font-weight: 900;
+    text-align: left;
+}
+
+.main-links a {
+    font-family: Avenir, serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: #ea6a0a;
+}
+
+.additional-links {
+    font-size: 13px;
+}
+
+.additional-links a {
+    color: #ea6a0a;
+}
