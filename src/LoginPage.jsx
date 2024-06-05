@@ -1,15 +1,27 @@
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './LoginPage.css';
-import custos_home from "./assets/custos_home.png";
+import custos_home from './assets/custos_home.png';
+import {fetchAuthorizationEndpoint, fetchToken} from "./api/auth.js";
 
 function LoginPage() {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [error] = useState(null);
 
-    function loadAuthURL() {
+    useEffect(() => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const code = urlParams.get('code');
+        console.log("CODE: " + code);
+        if (code !== null && code !== "") {
+            fetchToken({code}).then((data) => {
+                console.log(JSON.stringify("TOKEN DATA: " + data))
+            });
+        }
+    }, []);
 
+    const loadAuthURL = async () => {
+        await fetchAuthorizationEndpoint()
     }
 
     return (
